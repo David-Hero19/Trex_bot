@@ -1,45 +1,31 @@
-# 🦕 T-Rex Bot — Web Control Panel
+# Trex Bot
 
-A Flask web app that lets you control the T-Rex dino auto-player from your browser.
+A Python bot that automatically plays the Chrome T-Rex game by scanning 
+pixels on the screen in real time. Built a Flask web dashboard to control 
+and monitor the bot from the browser.
 
-## Setup
+## What it does
+- Watches the screen 120 times per second
+- Detects incoming obstacles by checking pixel brightness
+- Automatically presses Space to jump
+- Web control panel shows live jump count and logs
 
+## What I used
+- Python
+- Flask
+- PyAutoGUI
+- Pillow (PIL)
+- HTML & CSS & JavaScript
+
+## How to run it
 1. Install dependencies:
-   ```
    pip install flask pyautogui pillow numpy
-   ```
 
 2. Run the server:
-   ```
    python app.py
-   ```
 
-3. Open your browser at:
-   ```
-   http://localhost:5000
-   ```
+3. Open your browser at http://localhost:5000
 
-## How to use
+4. Open https://elgoog.im/t-rex/ in another window
 
-1. Open the game at https://elgoog.im/t-rex/ in another browser window
-2. Get the canvas coordinates:
-   - Press **F12** in Chrome to open DevTools
-   - Click the **Console** tab
-   - Paste this and press Enter:
-     ```js
-     document.querySelector('canvas').getBoundingClientRect()
-     ```
-   - Note the `left`, `top`, `right`, `bottom` values
-3. Enter those values in the control panel
-4. Click **▶ Start Bot**
-5. Switch to the game window — the bot will start playing automatically!
-
-## Project structure
-
-```
-trex_project/
-├── app.py              ← Flask backend + bot logic
-├── templates/
-│   └── index.html      ← Control panel frontend
-└── README.md
-```
+5. Enter the canvas coordinates and click Start Bot
