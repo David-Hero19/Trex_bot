@@ -8,7 +8,7 @@ from flask import Flask, render_template, jsonify, Response, stream_with_context
 
 app = Flask(__name__)
 
-# ── Shared state ───────────────────────────────────────────────────────────────
+# Shared state
 bot_state = {
     "running": False,
     "jumps": 0,
@@ -102,7 +102,7 @@ def run_bot(region):
         log("STOPPED")
 
 
-# ── Routes ─────────────────────────────────────────────────────────────────────
+# Routes 
 
 @app.route("/")
 def index():
